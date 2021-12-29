@@ -19,14 +19,14 @@ class Intro extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        color: Colors.blue),
+                        color: Colors.red),
                   ),
                   trailing: IconButton(
                       onPressed: () {},
                       icon: Icon(
                         Icons.person_pin,
                         size: 32,
-                        color: Colors.blue,
+                        color: Colors.red,
                       )),
                 ),
               ),
@@ -73,9 +73,14 @@ class Intro extends StatelessWidget {
                       ),
                       child: Row(
                         children: [
-                          Text(
-                            'If you are feeling sick or any other symtomss of Covid-19 \n Please call or SMS for you nd society betterment',
-                            style: TextStyle(fontSize: 15, color: Colors.white),
+                          Expanded(
+                            child: Text(
+                              'If you are feeling sick or any other symtomss of Covid-19. Please call or SMS for you nd society betterment',
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
                         ],
                       ),
@@ -87,6 +92,9 @@ class Intro extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(12.0),
                             child: ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(Colors.deepPurple),
+                              ),
                                 onPressed: () {},
                                 child: Padding(
                                   padding: const EdgeInsets.all(5.0),
@@ -94,6 +102,9 @@ class Intro extends StatelessWidget {
                                 )),
                           ),
                           ElevatedButton(
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(Colors.deepPurple),
+                              ),
                               onPressed: () {},
                               child: Padding(
                                 padding: const EdgeInsets.all(5.0),
@@ -108,7 +119,7 @@ class Intro extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: Card(
-              color: Colors.grey.shade400,
+              color: Colors.blue,
               elevation: 9,
               child: Column(
                 children: [
@@ -123,7 +134,7 @@ class Intro extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.black),
+                                color: Colors.white),
                           ),
                         ),
                       ],
@@ -133,35 +144,39 @@ class Intro extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 35, vertical: 10),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Card(
-                            elevation: 6,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                children: [
-                                  Image.asset(
-                                    'assets/1.jpg',
-                                    width: 50,
-                                  ),
-                                  Text('Wash your hands'),
-                                ],
+                          Expanded(
+                            child: Card(
+                              elevation: 6,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: [
+                                    Image.asset(
+                                      'assets/1.jpg',
+                                      width: 50,
+                                    ),
+                                    Text('Wash your hands'),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                          Card(
-                            elevation: 6,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                children: [
-                                  Image.asset(
-                                    'assets/2.jpg',
-                                    width: 50,
-                                  ),
-                                  Text('Senitize the surrounding'),
-                                ],
+                          Expanded(
+                            child: Card(
+                              elevation: 6,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: [
+                                    Image.asset(
+                                      'assets/2.jpg',
+                                      width: 50,
+                                    ),
+                                    Text('Senitize the surrounding'),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -173,43 +188,47 @@ class Intro extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Card(
-                          elevation: 6,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              vertical: 8.0,
-                            ),
-                            child: Column(
-                              children: [
-                                Image.asset(
-                                  'assets/3.jpg',
-                                  width: 50,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 28.0),
-                                  child: Text('Stay Home'),
-                                ),
-                              ],
+                        Expanded(
+                          child: Card(
+                            elevation: 6,
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                vertical: 8.0,
+                              ),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    'assets/3.jpg',
+                                    width: 50,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 28.0),
+                                    child: Text('Stay Home\nStay Safe'),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
-                        Card(
-                          elevation: 6,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              children: [
-                                Image.asset(
-                                  'assets/4.jpg',
-                                  width: 50,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 24.0),
-                                  child: Text('No shake hand'),
-                                ),
-                              ],
+                        Expanded(
+                          child: Card(
+                            elevation: 6,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    'assets/4.jpg',
+                                    width: 50,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 24.0),
+                                    child: Text('No shake hand'),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -227,20 +246,23 @@ class Intro extends StatelessWidget {
                 elevation: 9,
                 child: Row(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(12.0),
-                      child: Column(
-                        children: [Image.asset('assets/5.jpg', width: 185,)],
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Image.asset(
+                          'assets/5.jpg',
+                          width: 185,
+                        ),
                       ),
                     ),
-                    Column(
-                      children: [Text('Have you vaccinated?',
-                      style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black
+                    Expanded(
+                      child: Text(
+                        'Have you vaccinated?',
+                        style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black),
                       ),
-                      )],
                     ),
                   ],
                 )),

@@ -252,7 +252,7 @@ class _StatsState extends State<Stats> {
                                       ),
                                     ],
                                   ),
-                                  Column(
+                                    Column(
                                     children: [
                                       Row(
                                         children: [

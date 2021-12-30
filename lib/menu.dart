@@ -20,12 +20,12 @@ class Menu extends StatelessWidget {
                   'Menu',
                   style: TextStyle(
                     fontSize: 30,
-                    color: Colors.blue,
+                    color: Colors.red,
                   ),
                 ),
                 Padding(
                   padding: EdgeInsets.all(13.0),
-                  child: Icon(Icons.search, color: Colors.blue),
+                  child: Icon(Icons.search, color: Colors.red),
                 ),
               ],
             ),
@@ -38,7 +38,7 @@ class Menu extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListTile(
-              tileColor: Colors.blue,
+              tileColor: Colors.red,
               title: Text(
                 'See the latest Covid-19 News',
                 style: TextStyle(
@@ -61,72 +61,186 @@ class Menu extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Column(
-                  children: [
-                    Card(
-                      elevation: 9,
-                      child: SizedBox(
-                        height: 200,
-                        width: MediaQuery.of(context).size.width / 2.5,
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              'assets/5.jpg',
-                              width: 80,
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.symmetric(vertical: 18),
-                              child: Text(
-                                'Get Vaccinated',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.blue),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Card(
+                        elevation: 9,
+                        child: SizedBox(
+                          height: 200,
+                          width: MediaQuery.of(context).size.width / 2.5,
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                'assets/5.jpg',
+                                width: 80,
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: ElevatedButton(
-                                onPressed: () {},
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Row(
-                                    children: const [
-                                      Icon(Icons.arrow_forward_ios),
-                                      Text('Call')
-                                    ],
+                              const Padding(
+                                padding: EdgeInsets.symmetric(vertical: 18),
+                                child: Text(
+                                  'Get Vaccinated',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.red),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      children: const [
+                                        Icon(Icons.arrow_forward_ios),
+                                        Text('Call')
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(12.0),
-                      child: Card(
+                      Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Card(
+                          child: SizedBox(
+                            height: 80,
+                            width: MediaQuery.of(context).size.width / 2.5,
+                            child: Padding(
+                              padding: const EdgeInsets.all(5.0),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: const [
+                                      Icon(
+                                        Icons.groups,
+                                        color: Colors.red,
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: const [
+                                      Text(
+                                        'Advice',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.red,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Card(
+                          child: SizedBox(
+                            height: 80,
+                            width: MediaQuery.of(context).size.width / 2.5,
+                            child: Padding(
+                              padding: const EdgeInsets.all(5.0),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: const [
+                                      Icon(
+                                        Icons.check_box_rounded,
+                                        color: Colors.red,
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: const [
+                                      Text(
+                                        'Check Symptoms',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.red,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Card(
+                          child: SizedBox(
+                            height: 80,
+                            width: MediaQuery.of(context).size.width / 2.5,
+                            child: Padding(
+                              padding: const EdgeInsets.all(5.0),
+                              child: Column(
+                                children: [
+                                  Expanded(
+                                    child: Row(
+                                      children: const [
+                                        Icon(
+                                          Icons.meeting_room,
+                                          color: Colors.red,
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  Expanded(
+                                    child: Row(
+                                      children: const [
+                                        Text(
+                                          'Register Room',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.red,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Card(
                         child: SizedBox(
                           height: 80,
                           width: MediaQuery.of(context).size.width / 2.5,
                           child: Padding(
-                            padding: const EdgeInsets.all(5.0),
+                            padding: const EdgeInsets.all(11.0),
                             child: Column(
                               children: [
                                 Row(
                                   children: const [
                                     Icon(
-                                      Icons.groups,
-                                      color: Colors.blue,
+                                      Icons.schedule_outlined,
+                                      color: Colors.red,
                                     )
                                   ],
                                 ),
                                 Row(
                                   children: const [
                                     Text(
-                                      'Advice',
+                                      'Current situation',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.blue,
+                                        color: Colors.red,
                                       ),
                                     )
                                   ],
@@ -136,32 +250,29 @@ class Menu extends StatelessWidget {
                           ),
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(12.0),
-                      child: Card(
+                      Card(
                         child: SizedBox(
                           height: 80,
                           width: MediaQuery.of(context).size.width / 2.5,
                           child: Padding(
-                            padding: const EdgeInsets.all(5.0),
+                            padding: const EdgeInsets.all(11.0),
                             child: Column(
                               children: [
                                 Row(
                                   children: const [
                                     Icon(
                                       Icons.check_box_rounded,
-                                      color: Colors.blue,
+                                      color: Colors.red,
                                     )
                                   ],
                                 ),
                                 Row(
                                   children: const [
                                     Text(
-                                      'Check Symptoms',
+                                      'Corona Test',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.blue,
+                                        color: Colors.red,
                                       ),
                                     )
                                   ],
@@ -171,32 +282,29 @@ class Menu extends StatelessWidget {
                           ),
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(12.0),
-                      child: Card(
+                      Card(
                         child: SizedBox(
                           height: 80,
                           width: MediaQuery.of(context).size.width / 2.5,
                           child: Padding(
-                            padding: const EdgeInsets.all(5.0),
+                            padding: const EdgeInsets.all(11.0),
                             child: Column(
                               children: [
                                 Row(
                                   children: const [
                                     Icon(
-                                      Icons.meeting_room,
-                                      color: Colors.blue,
+                                      Icons.article_rounded,
+                                      color: Colors.red,
                                     )
                                   ],
                                 ),
                                 Row(
                                   children: const [
                                     Text(
-                                      'Register Isolation Room',
+                                      'media',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.blue,
+                                        color: Colors.red,
                                       ),
                                     )
                                   ],
@@ -206,140 +314,40 @@ class Menu extends StatelessWidget {
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Card(
-                      child: SizedBox(
-                        height: 80,
-                        width: MediaQuery.of(context).size.width / 2.5,
-                        child: Padding(
-                          padding: const EdgeInsets.all(11.0),
-                          child: Column(
-                            children: [
-                              Row(
-                                children: const [
-                                  Icon(
-                                    Icons.schedule_outlined,
-                                    color: Colors.blue,
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: const [
-                                  Text(
-                                    'Current situation',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.blue,
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ],
+                      Card(
+                        child: SizedBox(
+                          height: 80,
+                          width: MediaQuery.of(context).size.width / 2.5,
+                          child: Padding(
+                            padding: const EdgeInsets.all(11.0),
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: const [
+                                    Icon(
+                                      Icons.help_center_rounded,
+                                      color: Colors.red,
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  children: const [
+                                    Text(
+                                      'Help',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.red,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    Card(
-                      child: SizedBox(
-                        height: 80,
-                        width: MediaQuery.of(context).size.width / 2.5,
-                        child: Padding(
-                          padding: const EdgeInsets.all(11.0),
-                          child: Column(
-                            children: [
-                              Row(
-                                children: const [
-                                  Icon(
-                                    Icons.check_box_rounded,
-                                    color: Colors.blue,
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: const [
-                                  Text(
-                                    'Corona Test',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.blue,
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Card(
-                      child: SizedBox(
-                        height: 80,
-                        width: MediaQuery.of(context).size.width / 2.5,
-                        child: Padding(
-                          padding: const EdgeInsets.all(11.0),
-                          child: Column(
-                            children: [
-                              Row(
-                                children: const [
-                                  Icon(
-                                    Icons.article_rounded,
-                                    color: Colors.blue,
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: const [
-                                  Text(
-                                    'media',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.blue,
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Card(
-                      child: SizedBox(
-                        height: 80,
-                        width: MediaQuery.of(context).size.width / 2.5,
-                        child: Padding(
-                          padding: const EdgeInsets.all(11.0),
-                          child: Column(
-                            children: [
-                              Row(
-                                children: const [
-                                  Icon(
-                                    Icons.help_center_rounded,
-                                    color: Colors.blue,
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: const [
-                                  Text(
-                                    'Help',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.blue,
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -352,7 +360,7 @@ class Menu extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListTile(
-              tileColor: Colors.blue,
+              tileColor: Colors.red,
               title: Text(
                 'Rate Us',
                 style: TextStyle(
@@ -372,7 +380,7 @@ class Menu extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListTile(
-              tileColor: Colors.blue,
+              tileColor: Colors.red,
               title: Text(
                 'Settings',
                 style: TextStyle(

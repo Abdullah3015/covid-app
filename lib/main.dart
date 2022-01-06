@@ -1,6 +1,4 @@
-import 'package:covid_app/home_page.dart';
-import 'package:covid_app/stats.dart';
-
+import 'package:covid_app/home_screen.dart';
 import 'package:flutter/material.dart';
 void main() => runApp(App());
 class App extends StatelessWidget {

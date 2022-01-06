@@ -44,7 +44,7 @@ class Home_page extends StatelessWidget {
           children: <Widget>[
             DrawerHeader(
               decoration:  BoxDecoration(
-                color: Colors.blue,
+                color: Colors.red,
               ),
               child: Column(
                 children: [

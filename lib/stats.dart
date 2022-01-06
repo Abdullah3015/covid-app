@@ -46,7 +46,7 @@ class _StatsState extends State<Stats> {
                         child: Row(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(115, 5, 4, 5),
+                              padding: const EdgeInsets.fromLTRB(15, 5, 4, 5),
                               child: Text(
                                 C_news[index]['dateChecked']
                                     .toString()
@@ -138,123 +138,50 @@ class _StatsState extends State<Stats> {
                                       ),
                                     ],
                                   ),
-                                  Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.all(5.0),
-                                            child: Icon(
-                                              Icons.health_and_safety_sharp,
-                                              color: Colors.teal,
-                                              size: 26,
-                                            ),
-                                          ),
-                                          Text(
-                                            'Recover',
-                                            style: TextStyle(
-                                              color: Colors.teal,
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(2.0),
-                                        child: Text(
-                                          (C_news[index]['recover']
-                                                      .toString() ==
-                                                  'null')
-                                              ? 'NONE'
-                                              : C_news[index]['recover']
-                                                  .toString(),
-                                          style: TextStyle(
-                                            color: Colors.teal,
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
                                 ],
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(15.0),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
+                          
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(18.0),
+                                  child: Column(
                                     children: [
                                       Row(
                                         children: [
-                                          Padding(
-                                            padding: const EdgeInsets.all(5.0),
-                                            child: Icon(
-                                              Icons.local_hospital_rounded,
-                                              color: Colors.purple,
-                                              size: 26,
-                                            ),
-                                          ),
-                                          Text(
-                                            'Hospitalize'.toString(),
-                                            style: TextStyle(
-                                              color: Colors.purple,
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(5.0),
-                                        child: Text(
-                                          C_news[index]['hospitalizedCurrently']
-                                              .toString(),
-                                          style: TextStyle(
-                                            color: Colors.purple,
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.all(5.0),
-                                            child: Icon(
-                                              Icons.clear_outlined,
-                                              color: Colors.red,
-                                              size: 26,
-                                            ),
-                                          ),
-                                          Text(
-                                            'death'.toString(),
-                                            style: TextStyle(
-                                              color: Colors.red,
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(5.0),
-                                        child: Text(
-                                          C_news[index]['death'].toString(),
-                                          style: TextStyle(
+                                          Icon(
+                                            Icons.clear_outlined,
                                             color: Colors.red,
-                                            fontSize: 20,
+                                            size: 26,
                                           ),
+                                          Text(
+                                            'Death',
+                                            style: TextStyle(
+                                              color: Colors.red,
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Text(
+                                        C_news[index]['death'].toString(),
+                                        style: TextStyle(
+                                          color: Colors.red,
+                                          fontSize: 20,
                                         ),
                                       ),
                                     ],
                                   ),
-                                    Column(
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(18.0),
+                                  child: Column(
                                     children: [
                                       Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.all(5.0),
@@ -285,9 +212,9 @@ class _StatsState extends State<Stats> {
                                       ),
                                     ],
                                   ),
-                                ],
-                              ),
-                            ),
+                                ),
+                              ],
+                            )
                           ],
                         ),
                       ),
